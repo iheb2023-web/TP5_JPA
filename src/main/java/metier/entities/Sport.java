@@ -2,8 +2,19 @@ package metier.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Sport")
 public class Sport implements Serializable {
+	
+	@Id
+	@GeneratedValue
     private Long idSport;
+	
     private String nomSport;
     private String description;
     private String dateFondation;
